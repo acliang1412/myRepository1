@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+    width: 60%;
+    background-color: #e6f7ff; /* Light blue background */
+    color: #222244;            /* Dark font color */
+}
+
+th, td {
+    border: 2px solid #333366; /* Dark blue border */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #b3d1ff; /* Lighter blue for header */
+}
+
+tr:hover {
+    background-color: #ffe066; /* Yellow highlight on hover */
+}
