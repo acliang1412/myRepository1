@@ -1,0 +1,17 @@
+p {
+    text-align: center;
+    color: red;
+}
+.My_Style {
+        background-color: turquoise;
+            color: black;
+                text-decoration: underline;
+                    font-weight: bold;
+                        font-size: 20px;
+                            font-family: Arial, sans-serif;
+                                padding: 10px;
+                                    border: 2px solid black;
+                                        border-radius: 5px;
+                                            margin: 20px;
+                                                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
