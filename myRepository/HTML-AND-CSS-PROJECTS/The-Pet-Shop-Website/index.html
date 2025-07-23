@@ -3,7 +3,7 @@
     <head>
         <title>The Pet Shop</title>
         <meta charset="UTF-8">
-
+        <meta name="description" content="Welcome to The Pet Shop! Find your perfect pet, learn about pet care, and explore our adoption events, videos, and more.">
     </head>
     <body>
         <!--NAVBAR-->
@@ -12,24 +12,86 @@
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
+            <ul>
+                <a href="#cat"><li>Cats & Kittens</li></a>
+                <a href="#dog"><li>Dogs & Puppies</li></a>
+                <a href="#rabbit"><li>Rabbits</li></a>
+                <a href="#guineaPig"><li>Guinea Pig</li></a>
+                <a href="#fish"><li>Fish</li></a>
+                <a href="#reptile"><li>Reptiles</li></a>
+                <a href="#video"><li>Videos</li></a>
+            </ul>
         </nav>
         <!--HEADER-->
         <header>
             <div>
                 <h1>Welcome to the Pet Shop!</h1>
+                <p>Find your <em>perfect</em> pet today!</p>
+                <p>
+                    <a href="https://www.aspca.org/" target="_blank">Learn more about pet care (opens in new tab)</a>
+                </p>
             </div>
         </header>
+        <blockquote>
+            “Until one has loved an animal, a part of one’s soul remains unawakened.”<br>
+            <cite>- Anatole France</cite>
+        </blockquote>
+        <!--ARTICLE EXAMPLE-->
+        <article>
+            <h2>Pet Adoption Event</h2>
+            <p>We are hosting a special pet adoption event at our shop!</p>
+            <details>
+                <summary>Event Details</summary>
+                <p>
+                    Join us on 
+                    <time datetime="2025-08-15T10:00">August 15, 2025 at 10:00 AM</time>
+                    for a fun-filled day with pets, prizes, and more.
+                </p>
+            </details>
+        </article>
         <!--PET IMAGES-->
         <section>
             <div>
                 <h2>Choose a Pet!</h2>
                 <div>
                     <!--CAT IMAGE-->
-                    <div>
+                    <div id="cat">
                         <h3>Cats & Kittens</h3>
                         <img src = "images/cat.png" alt="Cat Image" width="400" height="300">
                     </div>
+                    <!--DOG IMAGE-->
+                    <div id="dog">
+                        <h3>Dogs & Puppies</h3>
+                        <img src = "images/dog.png" alt="Dog Image" width="400" height="300">
+                    </div>
+                    <!--RABBIT IMAGE-->
+                    <div id="rabbit">
+                        <h3>Rabbits</h3>
+                        <img src = "images/rabbits.png" alt="Rabbit Image" width="400" height="300">
+                    </div> 
+                    <!--GUINEA PIG IMAGE-->
+                    <div id="guineaPig">
+                        <h3>Guinea Pig</h3>
+                        <img src = "images/guineapigs.png" alt="guineapigs Image" width="400" height="300">
+                    </div>
+                    <!--FISH IMAGE-->
+                    <div id="fish">
+                        <h3>Fish</h3>
+                        <img src = "images/fish.png" alt="picture of goldfish" width="400" height="300">
+                    </div>
+                    <!--REPTILE IMAGE-->
+                    <div id="reptile">
+                        <h3>Reptile</h3>
+                        <img src = "images/beardedDragon.png" alt="beardedDragon Image" width="400" height="300">
+                    </div>
                 </div>
+            </div>
+        </section>
+        <!--VIDEOS-->
+        <section>
+            <div id="video">
+                <h3>Watch Our Videos!</h3>
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/ng58pNPDDW4"></iframe>
             </div>
         </section>
         <!--FOOTER-->
