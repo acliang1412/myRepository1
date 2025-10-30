@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Creating Effects with CSS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li class ="drop">
+                <a href="#">Images</a>
+                <div class="rollover-menu">
+                    <a href="#image1">Image 1</a>
+                    <a href="#image2">Image 2</a>
+                    <a href="#image3">Image 3</a>
+                </div>
+
+            </li>
+        </ul>
+    </nav>
+    <!--IMAGES-->
+    <section>
+        <!--Image 1-->
+        <div class="image-container" id="image1">
+            <img src="images/anime_lunchbox.jpg" alt="Anime-style lunchbox with bento items" title="Anime-style lunchbox with bento items">
+            <div class ="overlay"></div>
+        </div>
+        <!--Image 2-->
+        <div class= "image-container" id="image2">
+            <img src="images/cake.jpg" class="zoom" alt="Decorated cake on a plate" title="Decorated cake">
+        </div>
+        <!--Image 3-->
+        <div class= "image-container" id="image3">
+            <div class ="circle">
+            <img src="images/sushi.jpg" alt="Assorted sushi on a plate" title="Assorted sushi on a plate">
+            </div>
+        </div>
+
+    </section>
+    <!--FOOTER-->
+    <footer>
+        <div class="footer-text">
+            <p>Andy &copy; Liang </p>
+        </div>
+    </footer>
+</body>
+
+</html>
