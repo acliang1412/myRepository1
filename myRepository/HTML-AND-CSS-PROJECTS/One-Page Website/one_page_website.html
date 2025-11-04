@@ -1,138 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Anime World - One Page Website</title>
-    <meta name="description" content="A simple one-page website about anime, featuring images, a video, and a contact form.">
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            text-align: center; /* Center all text by default */
-        }
-        nav { 
-            background: #222; 
-            padding: 1em 0; 
-        }
-        nav ul { 
-            list-style: none; 
-            display: flex; 
-            justify-content: center; 
-            margin: 0; 
-            padding: 0; 
-        }
-        nav ul li { 
-            margin: 0 1em; 
-        }
-        nav ul li a { 
-            color: #fff; 
-            text-decoration: none; 
-            font-weight: bold; 
-        }
-        section { 
-            padding: 2em; 
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center content horizontally */
-        }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1em;
-        }
-        .gallery img { 
-            width: 200px; 
-            height: auto; 
-            margin: 0 1em 1em 0; 
-            border-radius: 8px; 
-        }
-        form { 
-            max-width: 400px; 
-            margin: 0 auto; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; /* Center form fields */
-        }
-        form input, form textarea { 
-            margin-bottom: 1em; 
-            padding: 0.5em; 
-            border-radius: 4px; 
-            border: 1px solid #ccc; 
-            width: 100%;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        form input[type="submit"] { 
-            background: #222; 
-            color: #fff; 
-            border: none; 
-            cursor: pointer; 
-            width: 50%;
-        }
-        footer { 
-            background: #222; 
-            color: #fff; 
-            text-align: center; 
-            padding: 1em 0; 
-        }
-        h1, h2 { 
-            color: #222; 
-            text-align: center;
-        }
-        /* Center the video section */
-        #video {
-            text-align: center;
-        }
-        #video iframe {
-            margin: 0 auto;
-            display: block;
-        }
-    </style>
+    <meta name="description"
+        content="A simple one-page website about anime, featuring images, a video, and a contact form.">
+    <link rel="stylesheet" href="css/one_page_website.css">
 </head>
+
 <body>
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" aria-current="page">Home</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#video">Video</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="home">
-        <h1>Welcome to Anime World!</h1>
-        <p>Anime is a style of animation that originated in Japan and has become popular worldwide. <br>
-        Explore some of the most beloved characters and series, watch a video, and contact us to share your favorite anime!</p>
-    </section>
-
-    <section id="gallery">
-        <h2>Anime Gallery</h2>
-        <div class="gallery">
-            <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Naruto_Uzumaki.png" alt="Naruto Uzumaki">
-            <img src="https://upload.wikimedia.org/wikipedia/en/7/7b/Sailor_Moon_character.png" alt="Sailor Moon">
-            <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Luffy.png" alt="Monkey D. Luffy">
+    <div class="hero" aria-labelledby="welcome-heading">
+        <div class="hero-content">
+            <h1 id="welcome-heading" class="hero-title">ようこそ<br>Welcome to Anime World!</h1>
+            <p class="hero-text">Discover the magical world of anime - where stories come alive!</p>
+            <a href="#gallery" class="hero-button">Explore Gallery</a>
         </div>
-    </section>
+    </div>
 
-    <section id="video">
-        <h2>Featured Anime Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/BgARtcQvLPc?si=gTPE9EyNPrQp7sAJ" title="Anime Compilation" frameborder="0" allowfullscreen></iframe>
-    </section>
+    <main>
+        <section id="home" aria-labelledby="about-heading" class="about-section">
+            <h2 id="about-heading" class="section-title">About Anime</h2>
+            <p class="about-text">Anime is a style of animation that originated in Japan and has become popular
+                worldwide.
+                From epic adventures to heartwarming stories, anime captures the imagination of millions around the
+                globe.</p>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="feature-icon">🌟</i>
+                    <h3>Amazing Stories</h3>
+                    <p>Epic tales that inspire</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🎨</i>
+                    <h3>Unique Art</h3>
+                    <p>Distinctive visual style</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">❤️</i>
+                    <h3>Global Community</h3>
+                    <p>Connect with fans</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
-            <input type="submit" value="Send">
-        </form>
-    </section>
+        <section id="gallery" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Anime Gallery</h2>
+            <div class="gallery" role="region" aria-label="Image gallery">
+                <img src="images/naruto.png"
+                    alt="Naruto Uzumaki - The main character from Naruto series, wearing an orange jumpsuit with spiky blonde hair">
+                <img src="images/sailor-moon.png"
+                    alt="Sailor Moon - The protagonist of the series, wearing her iconic sailor outfit with long blonde pigtails"
+                    class="sailor-moon-img">
+                <img src="images/luffy.jpeg"
+                    alt="Monkey D. Luffy - The main character from One Piece, wearing his signature straw hat">
+            </div>
+        </section>
+
+        <section id="video" aria-labelledby="video-heading">
+            <h2 id="video-heading">Featured Anime Video</h2>
+            <div class="video-container">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube-nocookie.com/embed/BgARtcQvLPc?rel=0&modestbranding=1"
+                    title="YouTube video player" 
+                    frameborder="0"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-fallback">
+                <a href="https://www.youtube.com/watch?v=BgARtcQvLPc" target="_blank" rel="noopener noreferrer">
+                    Watch video on YouTube
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+            <form role="form" aria-label="Contact form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+                </div>
+                <input type="submit" value="Send Message" aria-label="Submit form">
+            </form>
+        </section>
+    </main>
 
     <footer>
         &copy; 2025 Anime World. All rights reserved.
     </footer>
 </body>
+
 </html>
