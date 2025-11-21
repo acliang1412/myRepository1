@@ -1,0 +1,11 @@
+I was not able to download the images for the anime album automatically. Please add the following images to the 'images' directory:
+- anime1.jpg
+- anime2.jpg
+- anime3.jpg
+- anime4.jpg
+- anime5.jpg
+- anime6.jpg
+- anime7.jpg
+- anime8.jpg
+- anime9.jpg
+- background.jpg

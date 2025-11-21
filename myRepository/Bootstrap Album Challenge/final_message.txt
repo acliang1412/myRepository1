@@ -1,0 +1,6 @@
+I am unable to complete the task of creating the anime album because I cannot download or generate the required images. Please add the images to the 'images' directory as instructed in the README.txt file. Once the images are added, the task will be complete.
+
+Please also rename the following files in the 'images' directory:
+- deku.jpg -> anime4.jpg
+- Luffy.jpg -> anime5.jpg
+- naruto.jfif -> anime6.jpg
