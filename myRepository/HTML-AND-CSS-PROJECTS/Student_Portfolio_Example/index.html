@@ -79,7 +79,7 @@
         <div class="Row" id="Contact">
             <!--Contact image, left column-->
             <div class="Column_2 Column_tall">
-                <img src="images/background.jpg" alt="A thematic image for the contact section">
+                <iframe id="youtube-player" class="contact-video" src="https://www.youtube.com/embed/zgyg5FDGVTM?autoplay=1&mute=1&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <!--Contact form, right column-->
             <div class="Column_1 Column_tall">
@@ -101,5 +101,29 @@
         <footer>
             <p class="center">&copy; 2025 Andy C. Liang</p>
         </footer>
+
+        <script>
+            // This code loads the YouTube IFrame Player API code asynchronously.
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            if (firstScriptTag) {
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            } else {
+                document.head.appendChild(tag);
+            }
+
+            // This function creates a player object after the API code downloads.
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('youtube-player', {
+                    events: {
+                        'onReady': (event) => {
+                            event.target.setVolume(10); // Set volume to 10%
+                        }
+                    }
+                });
+            }
+        </script>
     </body>
 </html>

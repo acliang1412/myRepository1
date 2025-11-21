@@ -144,6 +144,14 @@ a:hover {
     font-style: normal;
 }
 
+.contact-video {
+    border-style: none; /* Remove default iframe border */
+    width: 100%;
+    height: 100%; /* Make video fill the column height */
+    min-height: 450px; /* Ensure a good minimum height */
+    border-radius: 5px; /* Matches the style of other images */
+}
+
 /* Contact Form Styling */
 #Contact {
     background-color: #2a475e;
