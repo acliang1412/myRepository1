@@ -55,7 +55,7 @@
                     style counterpart, which requires some care when rolling and stretching.
                     Here, you just push the dough into the skillet and you're cooking.
                     Save the leftovers for lunch!</p>
-                <input id="featured-button" type="button" value="Recipe">
+                <input id="featured-button" class="modal-button" type="button" value="Recipe" href="#recipeModalOne">
 
             </div>
         </div>
@@ -91,7 +91,8 @@
                     <div class="flip">
                         <!--Front-->
                         <div class="flip-front">
-                            <img src="images/chicken-thighs.jpeg" alt="Mediterranean-style chicken thighs with herbs and vegetables">
+                            <img src="images/chicken-thighs.jpeg"
+                                alt="Mediterranean-style chicken thighs with herbs and vegetables">
                         </div>
                         <!--BACK-->
                         <div class="flip-back">
@@ -202,11 +203,71 @@
             <h2>About Us!</h2>
             <div>
                 <p>
-                    Simple Recipes is your ultimate destination for easy-to-follow recipes that make cooking enjoyable for everyone, whether you're a seasoned chef or a beginner. Founded in the United States out of a passion for home cooking, our mission is to inspire and empower you to create delicious meals with everyday ingredients and simple techniques. We offer a wide range of diverse cuisines, from classic comfort foods to international dishes, all accompanied by step-by-step instructions and helpful tips to ensure your cooking experience is smooth and successful. Our dedicated team of home cooks and food enthusiasts meticulously test each recipe, so you can cook with confidence. At Simple Recipes, we believe that good food brings people together, and we're excited to have you join our community. Let’s cook up something amazing together!
+                    Simple Recipes is your ultimate destination for easy-to-follow recipes that make cooking enjoyable
+                    for everyone, whether you're a seasoned chef or a beginner. Founded in the United States out of a
+                    passion for home cooking, our mission is to inspire and empower you to create delicious meals with
+                    everyday ingredients and simple techniques. We offer a wide range of diverse cuisines, from classic
+                    comfort foods to international dishes, all accompanied by step-by-step instructions and helpful tips
+                    to ensure your cooking experience is smooth and successful. Our dedicated team of home cooks and
+                    food enthusiasts meticulously test each recipe, so you can cook with confidence. At Simple Recipes,
+                    we believe that good food brings people together, and we're excited to have you join our community.
+                    Let’s cook up something amazing together!
                 </p>
             </div>
         </div>
     </section>
+    <!--RECIPE MODALS-->
+    <!--RECIPE MODALS ONE-->
+    <div id="recipeModalOne" class="recipe-modal">
+        <!--MODAL CONTENT HERE-->
+        <div class="recipe-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h3>Deep Dish Skillet Pizza</h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="rp-column-1">
+                        <h4>Cook Time</h4>
+                        <p>30 - 40 minutes</p>
+
+                    </div>
+                    <div class="rp-column-1">
+                        <h4>Servings</h4>
+                        <p>6</p>
+                    </div>
+                    <div class="rp-column-1">
+                        <h4>Level</h4>
+                        <p>Medium</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="rp-column-1">
+                        <h4>Ingredients</h4>
+                        <ul class="recipe-list">
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                            <li>Lorem Ipsum</li>
+                        </ul>
+                    </div>
+                    <div class="rp-column-2">
+                        <h4>Directions</h4>
+                        <p class="recipe-directions">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+                            auctor, nisl eget ultricies ultricies, nunc nisl ultricies nunc, quis aliquam nisl nisl eget
+                            nisl. Nullam auctor, nisl eget ultricies ultricies, nunc nisl ultricies nunc, quis aliquam
+                            nisl nisl eget nisl.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
     <!--Contact Form-->
     <section>
         <div class="container" id="contact">
@@ -215,17 +276,18 @@
                 <br>
                 Contact us below!
             </h3>
-            <form>
-                <input type="text" placeholder="First name">
-                <input type="text" placeholder="Last name">
+            <div id="validateMsg"></div>
+            <form id="contactForm">
+                <input id="firstName" type="text" placeholder="First name">
+                <input id="lastName" type="text" placeholder="Last name">
                 <br>
-                <input type="email" placeholder="Email">
-                <input type="tel" placeholder="Phone Number">
+                <input id="email" type="email" placeholder="Email">
+                <input id="phone" type="tel" placeholder="Phone Number">
                 <br>
                 <input type="checkbox" id="subscription">
                 <label for="subscription">Subscribe to our weekly recipes!</label>
                 <br>
-                <textarea placeholder="Type Message Here..."></textarea>
+                <textarea id="message" placeholder="Type Message Here..."></textarea>
                 <br>
                 <input type="submit" value="Submit">
             </form>
@@ -248,6 +310,7 @@
             </tr>
         </table>
     </footer>
+    <script src="javascript/javascript.js"></script>
 </body>
 
 </html>
