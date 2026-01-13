@@ -57,12 +57,12 @@
             <h2 id="gallery-heading">Anime Gallery</h2>
             <div class="gallery" role="region" aria-label="Image gallery">
                 <img src="images/naruto.png"
-                    alt="Naruto Uzumaki - The main character from Naruto series, wearing an orange jumpsuit with spiky blonde hair">
+                    alt="Naruto Uzumaki - The main character from Naruto series, wearing an orange jumpsuit with spiky blonde hair" class="gallery-img">
                 <img src="images/sailor-moon.png"
                     alt="Sailor Moon - The protagonist of the series, wearing her iconic sailor outfit with long blonde pigtails"
-                    class="sailor-moon-img">
+                    class="sailor-moon-img gallery-img">
                 <img src="images/luffy.jpeg"
-                    alt="Monkey D. Luffy - The main character from One Piece, wearing his signature straw hat">
+                    alt="Monkey D. Luffy - The main character from One Piece, wearing his signature straw hat" class="gallery-img">
             </div>
         </section>
 
@@ -107,9 +107,18 @@
         </section>
     </main>
 
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <span class="prev-btn">&#10094;</span>
+        <span class="next-btn">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     <footer>
         &copy; 2025 Anime World. All rights reserved.
     </footer>
+
+    <script src="js/one_page_website.js"></script>
 </body>
 
 </html>
