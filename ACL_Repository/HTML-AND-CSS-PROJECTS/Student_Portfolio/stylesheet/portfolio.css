@@ -1,0 +1,215 @@
+/* General Body Styling */
+body.Background {
+    background-color: #1b2838; /* Steam's dark blue background */
+    color: #c7d5e0; /* Light grayish-blue text color */
+    font-family: 'Lato', sans-serif; /* Font similar to Steam's */
+    margin: 0;
+    padding-top: 55px; /* Add space for the fixed navbar */
+    padding: 0;
+    font-size: 16px;
+}
+
+/* Navbar Styling */
+.Navbar {
+    overflow: hidden;
+    background-color: #171a21; /* A slightly darker shade for the navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid #2a475e;
+}
+
+.Navbar a {
+    float: left;
+    display: block;
+    color: #c7d5e0; /* Light text for navbar links */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.Navbar a:hover {
+    background-color: #2a475e; /* Lighter blue on hover */
+    color: white;
+}
+
+.Navbar a.active {
+    background-color: #66c0f4; /* Steam's light blue for active link */
+    color: #171a21; /* Dark text on the active link for contrast */
+}
+
+/* Main Content Sections */
+.Row {
+    padding: 80px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-top: 1px solid #2a475e;
+    border-bottom: 1px solid #2a475e;
+}
+
+.Column_1, .Column_2 {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Column_1 {
+    flex: 60%;
+}
+
+.Column_2 {
+    flex: 40%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Headings and Paragraphs */
+h1 {
+    color: #66c0f4; /* Steam's accent blue for headings */
+    font-size: 2.5em;
+    border-bottom: 2px solid #2a475e;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Link Styling */
+a {
+    color: #66c0f4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Video Section */
+#Home {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/background.jpg');
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Creates a parallax-like effect */
+    margin-top: -55px; /* Pull the section up to fill the space behind the navbar */
+    position: relative;
+}
+
+.Video_Text {
+    text-align: center;
+    color: white;
+    background: rgba(23, 26, 33, 0.85); /* Increased opacity for better contrast */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.Video_Text h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better readability */
+    border: none;
+    font-size: 3em;
+}
+
+.Video_Text p {
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.Video_Text blockquote {
+    margin: 20px auto;
+    padding: 10px;
+    border-left: 3px solid #66c0f4;
+    max-width: 80%;
+}
+
+.Video_Text cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+}
+
+.contact-video {
+    border-style: none; /* Remove default iframe border */
+    width: 100%;
+    height: 100%; /* Make video fill the column height */
+    min-height: 450px; /* Ensure a good minimum height */
+    border-radius: 5px; /* Matches the style of other images */
+}
+
+/* Contact Form Styling */
+#Contact {
+    background-color: #2a475e;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    color: #c7d5e0;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #171a21;
+    background-color: #1b2838;
+    color: #c7d5e0;
+    border-radius: 3px;
+}
+
+form textarea {
+    height: 150px; /* Provide a decent default height for the message box */
+    resize: vertical; /* Allow users to resize it vertically */
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #66c0f4;
+    color: #171a21;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #a3d9f5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #171a21;
+    color: #c7d5e0;
+    border-top: 1px solid #2a475e;
+}
+
+.center {
+    text-align: center;
+}
+
+.white-text {
+    color: white;
+}

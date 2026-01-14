@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Andy C. Liang</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Home section with background image-->
+        <div id="Home">
+            <!--Hero Text-->
+            <div class="Video_Text">
+                <h1 class="white-text">Andy C. Liang's Portfolio</h1>
+                <blockquote class="center">
+                    <p>
+                        "A lesson without pain is meaningless. For you cannot gain anything without sacrificing something else in return. But once you have overcome it and made it your own... you will gain an irreplaceable fullmetal heart."
+                    </p>
+                    <cite>– Edward Elric, Fullmetal Alchemist</cite>
+                </blockquote>
+                <p class="center">
+                    My name is Andy C. Liang. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                    Thank you for stopping by and enjoy!
+                </p>
+            </div>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="images/andy.jpg" alt="A headshot of Andy C. Liang">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I'm a recent Computer Science graduate with a lifelong passion for gaming, which I'm now pursuing through game development studies. 
+                    <br>
+                    <br>Outside of coding and gaming, I enjoy playing volleyball, watching anime, and diving into light novels. While I can be introverted, I'm always pushing myself to connect with others. 
+                    <br>
+                    <br>I'm a dedicated learner, excited to build my skills and create amazing things. <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile by clicking the link below.
+                </p>
+                <p class="center"><a href="https://github.com/acliang1412" target="_blank">acliang1412</a></p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/acliang1412" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <iframe id="youtube-player" class="contact-video" src="https://www.youtube.com/embed/33mmqjBA9aU?autoplay=1&mute=1&enablejsapi=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank-->
+                <form action="" method="POST">
+                    <label for="Name">Name:</label>
+                    <input type="text" id="Name" name="Name" placeholder="Please enter your name here">
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label for="Message">Message:</label>
+                    <textarea id="Message" name="Message" placeholder="Please write your message here"></textarea>
+                    <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p class="center">&copy; 2025 Andy C. Liang</p>
+        </footer>
+
+        <script>
+            // This code loads the YouTube IFrame Player API code asynchronously.
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            if (firstScriptTag) {
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            } else {
+                document.head.appendChild(tag);
+            }
+
+            // This function creates a player object after the API code downloads.
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('youtube-player', {
+                    events: {
+                        'onReady': (event) => {
+                            event.target.setVolume(10); // Set volume to 10%
+                        }
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>

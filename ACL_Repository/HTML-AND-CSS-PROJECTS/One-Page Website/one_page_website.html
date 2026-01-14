@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anime World - One Page Website</title>
+    <meta name="description"
+        content="A simple one-page website about anime, featuring images, a video, and a contact form.">
+    <link rel="stylesheet" href="css/one_page_website.css">
+</head>
+
+<body>
+    <nav role="navigation" aria-label="Main navigation">
+        <ul>
+            <li><a href="#home" aria-current="page">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" aria-labelledby="welcome-heading">
+        <div class="hero-content">
+            <h1 id="welcome-heading" class="hero-title">ようこそ<br>Welcome to Anime World!</h1>
+            <p class="hero-text">Discover the magical world of anime - where stories come alive!</p>
+            <a href="#gallery" class="hero-button">Explore Gallery</a>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" aria-labelledby="about-heading" class="about-section">
+            <h2 id="about-heading" class="section-title">About Anime</h2>
+            <p class="about-text">Anime is a style of animation that originated in Japan and has become popular
+                worldwide.
+                From epic adventures to heartwarming stories, anime captures the imagination of millions around the
+                globe.</p>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="feature-icon">🌟</i>
+                    <h3>Amazing Stories</h3>
+                    <p>Epic tales that inspire</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">🎨</i>
+                    <h3>Unique Art</h3>
+                    <p>Distinctive visual style</p>
+                </div>
+                <div class="feature-item">
+                    <i class="feature-icon">❤️</i>
+                    <h3>Global Community</h3>
+                    <p>Connect with fans</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Anime Gallery</h2>
+            <div class="gallery" role="region" aria-label="Image gallery">
+                <img src="images/naruto.png"
+                    alt="Naruto Uzumaki - The main character from Naruto series, wearing an orange jumpsuit with spiky blonde hair" class="gallery-img">
+                <img src="images/sailor-moon.png"
+                    alt="Sailor Moon - The protagonist of the series, wearing her iconic sailor outfit with long blonde pigtails"
+                    class="sailor-moon-img gallery-img">
+                <img src="images/luffy.jpeg"
+                    alt="Monkey D. Luffy - The main character from One Piece, wearing his signature straw hat" class="gallery-img">
+            </div>
+        </section>
+
+        <section id="video" aria-labelledby="video-heading">
+            <h2 id="video-heading">Featured Anime Video</h2>
+            <div class="video-container">
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube-nocookie.com/embed/BgARtcQvLPc?rel=0&modestbranding=1"
+                    title="YouTube video player" 
+                    frameborder="0"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-fallback">
+                <a href="https://www.youtube.com/watch?v=BgARtcQvLPc" target="_blank" rel="noopener noreferrer">
+                    Watch video on YouTube
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Us</h2>
+            <form role="form" aria-label="Contact form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+                </div>
+                <input type="submit" value="Send Message" aria-label="Submit form">
+            </form>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <span class="prev-btn">&#10094;</span>
+        <span class="next-btn">&#10095;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <footer>
+        &copy; 2025 Anime World. All rights reserved.
+    </footer>
+
+    <script src="js/one_page_website.js"></script>
+</body>
+
+</html>
