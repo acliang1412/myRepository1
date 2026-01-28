@@ -319,3 +319,19 @@ footer{
     width: auto;
     height: 130px;
 }
+
+/*POPPOVERS*/
+
+.star-rating{
+   width: 80%; 
+}
+
+/*TOASTS*/
+.custom-toast{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    
+}
