@@ -335,3 +335,20 @@ footer{
     z-index: 1000;
     
 }
+
+/* CAROUSEL CONTROLS */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    padding: 25px;
+    background-size: 50% 50%;
+}
+
+.carousel-control-prev {
+    left: -80px;
+}
+
+.carousel-control-next {
+    right: -80px;
+}

@@ -13,27 +13,21 @@ popoverTriggerList.forEach(function(element) {
     });
 });
 
-//Initialize toast
-var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-var toastList = toastElList.map(function (toastEl) {
-  return new bootstrap.Toast(toastEl)
-})
-
-//Function to show toast with selected options
-function displaySelectedMovieOptions(){
+// Function to display selected movie options in the modal
+function displaySelectedMovieInModal() {
     var movie = document.getElementById("movieSelect").options[document.getElementById('movieSelect').selectedIndex].text;
     var time = document.getElementById("timeSelect").options[document.getElementById('timeSelect').selectedIndex].text;
     var quantity = document.getElementById('quantity').value;
-    var message = "Purchase confirmed for: " + movie + "\nTime: " + time + "\nTickets: " + quantity;
+    var message = "You are about to purchase " + quantity + " ticket(s) for " + movie + " at " + time + ".";
 
-
-    //Display Toast
-    var toastBody = document.getElementById('toastBody');
-    toastBody.textContent = message;
-    var toast = new bootstrap.Toast(document.getElementById('toastDisplay'));
-    toast.show()
+    // Display Modal
+    var modalBody = document.querySelector('#ticketModal .modal-body');
+    modalBody.textContent = message;
+    var ticketModal = new bootstrap.Modal(document.getElementById('ticketModal'));
+    ticketModal.show();
 }
 
+
 function buyTickets(){
-    displaySelectedMovieOptions();
+    displaySelectedMovieInModal();
 }
