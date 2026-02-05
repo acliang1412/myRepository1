@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Double Click Demo</title>
+</head>
+<body>
+    <p id="message" ondblclick="displayMessage()">Double-click this paragraph to see a change!</p>
+
+    <script>
+        function displayMessage() {
+            document.getElementById("message").innerHTML = "You successfully double-clicked the paragraph!";
+        }
+    </script>
+</body>
+</html>
