@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+    <script src="form.js"></script>
+    <link rel="stylesheet" href="popup_style.css">
+</head>
+<body>
+
+    <form name="myForm" onsubmit="return validateForm()">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+
+    <button class="open-button" onclick="openForm()">Contact Us</button>
+
+    <div class="form-popup" id="myFormPopup">
+      <form action="#" class="form-container">
+        <h1>Contact Us</h1>
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Your Name" name="name" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Your Email" name="email" required>
+
+        <label for="message"><b>Message</b></label>
+        <textarea placeholder="Your Message" name="message" required></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+    <script src="popup_script.js"></script>
+
+</body>
+</html>

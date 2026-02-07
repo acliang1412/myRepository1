@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON.stringify() Example</title>
+</head>
+<body>
+    <h1>JSON.stringify() Example</h1>
+    <p>Original JavaScript Object:</p>
+    <pre id="originalObject"></pre>
+    <p>JSON Stringified Output:</p>
+    <pre id="jsonOutput"></pre>
+    <p>Parsed JavaScript Object:</p>
+    <pre id="parsedObject"></pre>
+
+    <script>
+        // Create a JavaScript object
+        const user = {
+            name: "John Doe",
+            age: 30,
+            email: "john.doe@example.com",
+            isAdmin: false,
+            courses: ["HTML", "CSS", "JavaScript"]
+        };
+
+        // Display the original object
+        document.getElementById("originalObject").textContent = JSON.stringify(user, null, 2);
+
+        // Convert the JavaScript object to a JSON string
+        const jsonString = JSON.stringify(user);
+
+        // Display the JSON string in the <pre> tag
+        document.getElementById("jsonOutput").textContent = jsonString;
+
+        // You can also use JSON.stringify with a replacer function and a space argument
+        // for pretty-printing
+        const prettyJsonString = JSON.stringify(user, null, 2); // 2 spaces for indentation
+        console.log("Pretty printed JSON string:");
+        console.log(prettyJsonString);
+
+        // Parse the JSON string back into a JavaScript object
+        const parsedObject = JSON.parse(jsonString);
+
+        // Display the parsed object in the new <pre> tag
+        document.getElementById("parsedObject").textContent = JSON.stringify(parsedObject, null, 2);
+
+        // Using localStorage
+        console.log("Using localStorage...");
+
+        // 1. Store data in localStorage
+        localStorage.setItem('user', jsonString);
+        console.log("User data stored in localStorage.");
+
+        // 2. Retrieve data from localStorage
+        const storedUserString = localStorage.getItem('user');
+        console.log("Retrieved user data from localStorage:", storedUserString);
+
+        // 3. Parse the retrieved data
+        const storedUserObject = JSON.parse(storedUserString);
+        console.log("Parsed user object from localStorage:", storedUserObject);
+
+        // 4. Remove data from localStorage
+        localStorage.removeItem('user');
+        console.log("User data removed from localStorage.");
+
+        // Verify that the data has been removed
+        const removedUser = localStorage.getItem('user');
+        console.log("Attempting to retrieve removed user data:", removedUser); // Should be null
+    </script>
+</body>
+</html>
