@@ -13,12 +13,12 @@
 
     <!--Body-->
     <body class="Background">
-        
+
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
             <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
+            <a href="#Projects">Projects</a>
             <a href="#Contact">Contact</a>
         </div>
 
@@ -50,28 +50,60 @@
             <div class="Column_1">
                 <h1>About</h1>
                 <p>
-                    I'm a recent Computer Science graduate with a lifelong passion for gaming, which I'm now pursuing through game development studies. 
+                    I'm a recent Computer Science graduate with a lifelong passion for gaming, which I'm now pursuing through game development studies.
                     <br>
-                    <br>Outside of coding and gaming, I enjoy playing volleyball, watching anime, and diving into light novels. While I can be introverted, I'm always pushing myself to connect with others. 
+                    <br>Outside of coding and gaming, I enjoy playing volleyball, watching anime, and diving into light novels. While I can be introverted, I'm always pushing myself to connect with others.
                     <br>
                     <br>I'm a dedicated learner, excited to build my skills and create amazing things. <a href="#Contact">Contact</a> me below!
                 </p>
             </div>
         </div>
 
-        <!--GitHub section-->
-        <div class="Row" id="GitHub">
-            <!--Left column-->
-            <div class="Column_1">
-                <h1>GitHub</h1>
-                <p>
-                    You can view my coding projects on my GitHub profile by clicking the link below.
+        <!-- NEW PROJECTS SECTION -->
+        <div class="Row" id="Projects">
+            <div class="Column_1" style="width: 100%;">
+                <h1 class="center">Featured Projects & Code</h1>
+                <p class="center">
+                    A snapshot of my development work. You can explore the full source code for these projects on my
+                    <a href="https://github.com/acliang1412" target="_blank">GitHub Profile</a>.
                 </p>
-                <p class="center"><a href="https://github.com/acliang1412" target="_blank">acliang1412</a></p>
-            </div>
-            <!--Right column-->
-            <div class="Column_2">
-                <a href="https://github.com/acliang1412" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+
+                <hr style="border: 1px solid #ccc; margin: 20px 0;">
+
+                <!-- Project Grid -->
+                <div class="Project_Grid">
+
+                    <!-- Project 1: Bad Bot -->
+                    <div class="Project_Card">
+                        <h3>"Bad Bot" – Unreal Engine 5 & C++</h3>
+                        <p>
+                            Programmed core gameplay mechanics, custom character interaction logic, and AI tracking behaviors[cite: 1].
+                            Optimized performance using C++ standard library sequential containers for dynamic game-state management[cite: 1].
+                        </p>
+                        <a href="https://github.com/acliang1412" target="_blank">View Code Repository &rarr;</a>
+                    </div>
+
+                    <!-- Project 2: Capstone -->
+                    <div class="Project_Card">
+                        <h3>Unreal Engine 5 Capstone Project</h3>
+                        <p>
+                            A comprehensive capstone project built in Unreal Engine 5 that synthesizes advanced C++ gameplay systems,
+                            modular architecture, and Blueprint scripting. Developed using agile SDLC practices to create a polished, final engine codebase.
+                        </p>
+                        <a href="https://github.com/acliang1412/Unreal-Engine-Capstone" target="_blank">View Code Repository &rarr;</a>
+                    </div>
+
+                    <!-- Project 3: Jetpack Project -->
+                    <div class="Project_Card">
+                        <h3>Jetpack Movement System – UE5</h3>
+                        <p>
+                            Built a 3D physics-based character propulsion mechanic featuring vertical velocity calculations,
+                            fluid player control setups, and modular fuel depletion/recharge loops[cite: 1].
+                        </p>
+                        <span class="coming-soon" style="color: #888; font-style: italic;">Repository Upload Coming Soon</span>
+                    </div>
+
+                </div>
             </div>
         </div>
 
@@ -99,7 +131,7 @@
 
         <!--Footer section-->
         <footer>
-            <p class="center">&copy; 2025 Andy C. Liang</p>
+            <p class="center">&copy; 2026 Andy C. Liang</p>
         </footer>
 
         <script>
@@ -108,21 +140,21 @@
             tag.src = "https://www.youtube.com/iframe_api";
             var firstScriptTag = document.getElementsByTagName('script')[0];
             if (firstScriptTag) {
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             } else {
-                document.head.appendChild(tag);
+            document.head.appendChild(tag);
             }
 
             // This function creates a player object after the API code downloads.
             var player;
             function onYouTubeIframeAPIReady() {
-                player = new YT.Player('youtube-player', {
-                    events: {
-                        'onReady': (event) => {
-                            event.target.setVolume(10); // Set volume to 10%
-                        }
-                    }
-                });
+            player = new YT.Player('youtube-player', {
+            events: {
+            'onReady': (event) => {
+            event.target.setVolume(10); // Set volume to 10%
+            }
+            }
+            });
             }
         </script>
     </body>
